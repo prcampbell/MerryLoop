@@ -1,63 +1,84 @@
-import md_library;
-import md_login.ash;
-import md_logout.ash;
-import md_mpburn.ash;
-import md_free.ash;
+import ms_util.ash;
+import ms_inventory.ash;
+import ms_day.ash;
+
+import ms_01.ash;
 
 
-
-
-
-void main() 
+void main()
 {
+    //General mafia set up
+    cli_execute('autoattack 0');
+    cli_execute('refresh all');
+    cli_execute('mood apathetic');
+    cli_execute('/whitelist bonus adv');
 
-  /* Day Plan
+    //I should probably set restore options but whatever.
 
-  Breakfast
-  Day Prep
-  Fork:
-    - Garbo Day?
-    - Shell Day? (Don't need +MEAT part of mood, don't run turns, do free fights, so something manual can be done)
-  Loop
-  Garbo prep
-  Nightcap
+    initializeDay(my_daycount());
+    dailyEvents();
 
+    //handle pulls
+    //daily events
+    //diet
+    //tasks
+    //bedtime
 
-  */
-  if(!get_property('breakfastCompleted').to_boolean())
-  {
-    startDay(); 
-    mpBuff();
-    Aug15(); 
-    PYEC();
-    ClanShower();
-    FratNuns();
-    Sausages();
-  }
-
-  //mood up
-
-  //Disco Leer (60)
-  //Bind Lasagmbie
-  //Polka
-  //Singers Faithful Ocelot (60)
-  //Spirit of Taking (60)
-  //Leash of Linguine (60)
-  //Empathy
-  //Blood Bond (60)
-  //Pride
-  //Drescher's
-  //Curiosity (60)
-  //Ruthless Efficiency (30)
-
-  //check for Tunnel duplication
-
-  //mayfly bait
-
-  if(smokepatches_can())
-    smokepatches();  
-  //abort();
-  cli_execute('garbo');
-  endDay();
+    //cli_execute('make bitchin meat car; mcd 10');
 
 }
+
+
+/*
+
+Generic
+Order Blueberry muffin
+buy 11 chewing gum
+use 11 chewing gum (fish for totem + sauce pan)
+Council
+
+
+acquire continuum tranfunctioner
+
+IotM stuff
+summon waffles (aug. 24)
+summon sax
+summon tuba
+summon FLUDA
+summon skateboard
+summon Spooky VHS tape
+SIT : CryptoBotany
+use model trainset
+coal, logging mill, brain silo, diner, ore, MP, platform, ml
+Lyle Candycane Buff
+familiar slimeling
+equip stillsuit
+go to burning leaves
+harvest garden
+shake tea tree
+familiar cookbookbat
+get dressed
+apriling band helmet
+jurassic parka
+parka acid
+june cleaver
+rake
+designer sweat pants
+everfull dart holster
+spring shoes
+astral belt
+lock tiny rake
+fallguy send haunted pantry
+numberology YR war frat 151st captain
+maximize ml
+mayam rings yam wood yam clock
+mayam rings vessel yam cheese explosion
+sell stuff
+parka ml
+familiar patriotic eagle
+cast astral shell, cast elemental sauce
+adventure in Haunted Kitchen, eagle screech undead + bullseye/grovelling gravel
+2 runs in Spooky Forest
+familiar cookbookbat
+locket black crayon beetle (habitat + olfact)
+*/
