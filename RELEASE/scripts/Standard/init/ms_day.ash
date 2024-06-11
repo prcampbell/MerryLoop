@@ -2,6 +2,7 @@ void initializeDay(int day)
 {
 	if(inAftercore())
 	{
+        print('In aftercore, bye!');
 		return;
 	}
 
