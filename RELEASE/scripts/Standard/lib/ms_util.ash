@@ -1,3 +1,28 @@
+boolean inAftercore()
+{
+	return get_property("kingLiberated").to_boolean();
+}
+
+boolean isHermitAvailable()
+{
+	return true;
+}
+
+boolean isGalaktikAvailable()
+{
+	return true;
+}
+
+boolean isGeneralStoreAvailable()
+{
+	return true;
+}
+
+boolean isArmoryAndLeggeryStoreAvailable()
+{
+	return true;
+}
+
 boolean isMusGuildStoreAvailable()
 {
 	if ($classes[seal clubber, turtle tamer] contains my_class() && guild_store_available())
@@ -46,3 +71,4 @@ boolean inGnomeSign()
 {
 	return $strings[Blender, Packrat, Wombat] contains my_sign();
 }
+

@@ -23,7 +23,7 @@ void tootOriole()
 
 void tootGetMeat()
 {
-	auto_autosell(min(5, item_amount($item[hamethyst])), $item[hamethyst]);
-	auto_autosell(min(5, item_amount($item[baconstone])), $item[baconstone]);
-	auto_autosell(min(5, item_amount($item[porquoise])), $item[porquoise]);
+	autosell(min(5, item_amount($item[hamethyst])), $item[hamethyst]);
+	autosell(min(5, item_amount($item[baconstone])), $item[baconstone]);
+	autosell(min(5, item_amount($item[porquoise])), $item[porquoise]);
 }
