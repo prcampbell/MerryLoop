@@ -104,7 +104,7 @@ boolean autosellCrap()
 		}
 	}
 
-	foreach it in $items[PADL Phone, perforated battle paddle, keg shield, beer bomb, flask flops, sea tangelo, see lychee, see honeydew]
+	foreach it in $items[PADL Phone, perforated battle paddle, keg shield, beer bomb, flask flops, sea tangelo, sea lychee, sea honeydew]
 	{
 		if(item_amount(it) > 0)
 		{
