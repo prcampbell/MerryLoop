@@ -86,12 +86,12 @@ boolean autosellCrap()
 	{
 		if(item_amount(it) > 0)
 		{
-			auto_autosell(min(10,item_amount(it)), it);		//autosell all of this item
+			autosell(min(10,item_amount(it)), it);		//autosell all of this item
 		}
 	}
 	foreach it in $items[Ancient Vinyl Coin Purse, Black Pension Check, CSA Discount Card, Fat Wallet, Gathered Meat-Clip, Old Leather Wallet, Penultimate Fantasy Chest, Pixellated Moneybag, Old Coin Purse, Shiny Stones, Warm Subject Gift Certificate]
 	{
-		if(item_amount(it) > 0 && auto_is_valid(it))
+		if(item_amount(it) > 0)
 		{
 			use(min(10,item_amount(it)), it);
 		}
@@ -108,7 +108,7 @@ boolean autosellCrap()
 	{
 		if(item_amount(it) > 0)
 		{
-			auto_autosell(min(5,item_amount(it)), it);
+			autosell(min(5,item_amount(it)), it);
 		}
 	}
 
@@ -116,16 +116,16 @@ boolean autosellCrap()
 	{
 		if(item_amount(it) > 0)
 		{
-			auto_autosell(min(5,item_amount(it)), it);
+			autosell(min(5,item_amount(it)), it);
 		}
 	}
 	if(item_amount($item[hot wing]) > 3)
 	{
-		auto_autosell(item_amount($item[hot wing]) - 3, $item[hot wing]);
+		autosell(item_amount($item[hot wing]) - 3, $item[hot wing]);
 	}
 	if(item_amount($item[Chaos Butterfly]) > 1)
 	{
-		auto_autosell(item_amount($item[Chaos Butterfly]) - 1, $item[Chaos Butterfly]);
+		autosell(item_amount($item[Chaos Butterfly]) - 1, $item[Chaos Butterfly]);
 	}
 	return true;
 }

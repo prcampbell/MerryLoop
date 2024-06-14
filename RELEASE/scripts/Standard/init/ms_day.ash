@@ -52,7 +52,7 @@ void initializeDay(int day)
             create(1, $item[Bitchin\' Meatcar]);
         }
 
-        use(1, $item[model trainset]);
+        use(1, $item[model train set]);
         string page = `choice.php?pwd&whichchoice=1485&option=1&slot[0]=1&slot[1]=8&slot[2]=16&slot[3]=13&slot[4]=20&slot[5]=3&slot[6]=6&slot[7]=2`;
         visit_url(page,true,true);
         visit_url("main.php");
@@ -64,7 +64,7 @@ void initializeDay(int day)
             equip($slot[shirt], $item[Jurassic Parka]);
             equip($slot[weapon], $item[June Cleaver]);
             equip($slot[off-hand], $item[Rake]);
-            equip($slot[pants], $item[designer sweat pants]);
+            equip($slot[pants], $item[designer sweatpants]);
             equip($slot[acc1], $item[astral belt]);
             equip($slot[acc2], $item[cincho de mayo]);
             equip($slot[acc3], $item[spring shoes]);

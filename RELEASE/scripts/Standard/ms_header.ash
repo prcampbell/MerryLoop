@@ -25,7 +25,7 @@ boolean inCanadiaSign();
 
 boolean inGnomeSign();
 
-boolean autosellCrap()
+boolean autosellCrap();
 
 //Defined in ms_inventory.ash
 
