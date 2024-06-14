@@ -10,8 +10,48 @@ void initializeDay(int day)
 
     if(day == 1)
     {
-        tootGetMeat();
+        if (available_amount($item[rake]) < 1)
+        {
+            // visit the pile of burning leaves to grab the rakes
+            visit_url("campground.php?preaction=leaves");
+        }
 
+        use_familiar($familiar[slimeling]);
+        equip($slot[familiar], $item[tiny stillsuit]);
+        
+
+        tootGetMeat();
+        if(creatable_amount($item[Bitchin\' Meatcar]) > 0)
+        {
+            create(1, $item[Bitchin\' Meatcar]);
+        }
+
+        string page = `choice.php?pwd&whichchoice=1485&option=1&slot[0]=1&slot[1]=8&slot[2]=16&slot[3]=13&slot[4]=20&slot[5]=3&slot[6]=6&slot[7]=2`;
+        visit_url(page,true,true);
+        visit_url("main.php");
+
+        if(have_effect($effect[Everything looks Yellow]) == 0)
+        {
+                    //Get dressed and zap
+            equip($slot[hat], $item[Apriling Band Helmet]);
+            equip($slot[shirt], $item[Jurassic Parka]);
+            equip($slot[weapon], $item[June Cleaver]);
+            equip($slot[off-hand], $item[Rake]);
+            equip($slot[pants], $item[designer sweat pants]);
+            equip($slot[acc1], $item[astral belt]);
+            equip($slot[acc2], $item[cincho de mayo]);
+            equip($slot[acc3], $item[spring shoes]);
+            use_familiar($familiar[Jill-of-All-Trades]);
+            equip($slot[familiar], $item[tiny rake]);
+
+            cli_execute('parka dilophosaur');
+
+            abort();
+        }
+
+
+
+        autosellCrap();
         if((item_amount($item[Antique Accordion]) == 0) && (item_amount($item[Aerogel Accordion]) == 0) && (item_amount($item[Toy Accordion]) == 0) && ((my_meat() > npc_price($item[Toy Accordion])) && (npc_price($item[Toy Accordion]) != 0)))
         {
             //Try to get Antique Accordion early if we possibly can.

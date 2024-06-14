@@ -25,6 +25,8 @@ boolean inCanadiaSign();
 
 boolean inGnomeSign();
 
+boolean autosellCrap()
+
 //Defined in ms_inventory.ash
 
 boolean auto_buyUpTo(int num, item it);
