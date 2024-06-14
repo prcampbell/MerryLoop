@@ -52,6 +52,7 @@ void initializeDay(int day)
             create(1, $item[Bitchin\' Meatcar]);
         }
 
+        use(1, $item[model trainset]);
         string page = `choice.php?pwd&whichchoice=1485&option=1&slot[0]=1&slot[1]=8&slot[2]=16&slot[3]=13&slot[4]=20&slot[5]=3&slot[6]=6&slot[7]=2`;
         visit_url(page,true,true);
         visit_url("main.php");
